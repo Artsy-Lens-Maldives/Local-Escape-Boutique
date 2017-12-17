@@ -1,80 +1,96 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Hotel Booking</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+        <link rel="icon" href="/img/favicon.ico" sizes="16x16">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+        <!-- fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Karla:700,400' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
+        <!-- fontawesome -->
+		<link rel="stylesheet" href="/css/font-awesome.css" />
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+        <!-- bootstrap -->
+		<link rel="stylesheet" href="/css/bootstrap.min.css" />
 
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
+        <!-- uikit -->
+        <link rel="stylesheet" href="/css/uikit.min.css" />
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
+        <!-- animate -->
+        <link rel="stylesheet" href="/css/animate.css" />
+        <link rel="stylesheet" href="/css/datepicker.css" />
+        <!-- Owl carousel 2 css -->
+        <link rel="stylesheet" href="/css/owl.carousel.css">
+        <!-- rev slider -->
+        <link rel="stylesheet" href="/css/rev-slider/settings.css" />
+        <!-- lightslider -->
+        <link rel="stylesheet" href="/css/lightslider.css">
+        <!-- Theme -->
+        <link rel="stylesheet" href="/css/reset.css">
+        
+        <!-- custom css -->
+		<link rel="stylesheet" href="/css/style.css" />
+        <!-- responsive -->
+		<link rel="stylesheet" href="/css/responsive.css" />
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!-- This Template Is Fully Coded By Aftab Zaman from swiftconcept.com -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
+    </head>
+    <body id="error_page">
+        @include('partials.header')
 
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
 
         @yield('content')
-    </div>
+        
+        
+        @include('partials.footer')
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-</body>
+        <!-- jquery library -->
+        <script src="/js/vendor/jquery-1.11.2.min.js"></script>
+        <!-- bootstrap -->
+        <script src="/js/bootstrap.min.js"></script>
+		
+        <!-- uikit -->
+        <script src="/js/uikit.min.js"></script>
+        <!-- easing -->
+		<script src="/js/jquery.easing.1.3.min.js"></script>
+        <script src="/js/datepicker.js"></script>
+        <!-- scroll up -->
+        <script src="/js/jquery.scrollUp.min.js"></script>
+        <!-- owlcarousel -->
+        <script src="/js/owl.carousel.min.js"></script>
+        <!-- lightslider -->
+        <script src="/js/lightslider.js"></script>
+        <!-- wow Animation -->
+        <script src="/js/wow.min.js"></script>
+        <!--Activating WOW Animation only for modern browser-->
+        <!--[if !IE]><!-->
+        <script type="text/javascript">new WOW().init();</script>
+        <!--<![endif]-->
+
+        <!--Oh Yes, IE 9+ Supports animation, lets activate for IE 9+-->
+        <!--[if gte IE 9]>
+            <script type="text/javascript">new WOW().init();</script>
+        <![endif]-->         
+
+        <!--Opacity & Other IE fix for older browser-->
+        <!--[if lte IE 8]>
+            <script type="text/javascript" src="/js/ie-opacity-polyfill.js"></script>
+        <![endif]-->
+
+        <!-- my js -->
+        <script src="/js/main.js"></script>		
+    </body>
 </html>
