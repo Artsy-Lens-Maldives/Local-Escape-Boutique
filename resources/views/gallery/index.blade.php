@@ -41,62 +41,22 @@ id="gallery_page" @endsection
                                     <div class="accomodation_single_room">
                                         <div class="container">
                                             <div class="row">
-                                                <div class="col-lg-3 col-md-3 col-sm-3">
-                                                    <div class="single_room_wrapper clearfix">
-                                                        <div class="room_wrapper">
-                                                            <div class="room_media">
-                                                                <a href="img/room-image-eight.png" data-uk-lightbox="{group:'group1'}" title="Gallery">
-                                                                <figure class="uk-overlay uk-overlay-hover">
-                                                                    <img alt="img" src="img/room-image-eight.png" >
-                                                                    <div class="uk-overlay-panel uk-overlay-background uk-overlay-icon"></div>
-                                                                </figure>
-                                                                </a>
+                                                @foreach($photos as $photo)
+                                                    <div class="col-lg-3 col-md-3 col-sm-3">
+                                                        <div class="single_room_wrapper clearfix">
+                                                            <div class="room_wrapper">
+                                                                <div class="room_media">
+                                                                    <a href="{{ Helper::s3_url_gen($photo->photo_url) }}" data-uk-lightbox="{group:'group1'}" title="Gallery">
+                                                                    <figure class="uk-overlay uk-overlay-hover">
+                                                                        <img alt="img" src="{{ Helper::s3_url_gen($photo->thumbnail) }}" >
+                                                                        <div class="uk-overlay-panel uk-overlay-background uk-overlay-icon"></div>
+                                                                    </figure>
+                                                                    </a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-3 col-sm-3">
-                                                    <div class="single_room_wrapper clearfix">
-                                                        <div class="room_wrapper">
-                                                            <div class="room_media">
-                                                                <a href="img/room-image-nine.png" data-uk-lightbox="{group:'group1'}" title="Gallery">
-                                                                <figure class="uk-overlay uk-overlay-hover">
-                                                                    <img alt="img" src="img/room-image-nine.png" >
-                                                                    <div class="uk-overlay-panel uk-overlay-background uk-overlay-icon"></div>
-                                                                </figure>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-3 col-sm-3">
-                                                    <div class="single_room_wrapper clearfix">
-                                                        <div class="room_wrapper">
-                                                            <div class="room_media">
-                                                                <a href="img/room-image-ten.jpg" data-uk-lightbox="{group:'group1'}" title="Gallery">
-                                                                <figure class="uk-overlay uk-overlay-hover">
-                                                                    <img alt="img" src="img/room-image-ten.jpg" >
-                                                                    <div class="uk-overlay-panel uk-overlay-background uk-overlay-icon"></div>
-                                                                </figure>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3 col-md-3 col-sm-3">
-                                                    <div class="single_room_wrapper clearfix">
-                                                        <div class="room_wrapper">
-                                                            <div class="room_media">
-                                                                <a href="img/room-image-eleven.jpg" data-uk-lightbox="{group:'group1'}" title="Gallery">
-                                                                <figure class="uk-overlay uk-overlay-hover">
-                                                                    <img alt="img" src="img/room-image-eleven.jpg" >
-                                                                    <div class="uk-overlay-panel uk-overlay-background uk-overlay-icon"></div>
-                                                                </figure>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                @endforeach
                                             </div>
 
                                         </div>

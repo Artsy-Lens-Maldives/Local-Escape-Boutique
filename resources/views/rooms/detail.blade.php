@@ -10,7 +10,7 @@ id="room_detail_page" @endsection
             <div class="container-fluid">
                 <div class="row">
                     <div class="breadcrumb_main nice_title">
-                        <h2>Deluxe Room</h2>
+                        <h2>{{ $room->name }}</h2>
                     </div>
                 </div>
             </div>            
@@ -23,10 +23,9 @@ id="room_detail_page" @endsection
                     <div class="col-lg-9 col-md-9 col-sm-12 content" id="content">
                         <div class="deluxe_room_detail">
                             <div class="section_title content-left margin-bottom-5">
-                                <h5>Deluxe Room Detail <span class="price floatright">$ 130</span> <br> <span class="day floatright">/ night</span></h5>
+                                <h5>{{ $room->name }} Detail <span class="price floatright">$ 130</span> <br> <span class="day floatright">/ night</span></h5>
                             </div>
                             <div class="section_content">
-                                <p>Checkout the latest deal</p>
                                 <div class="showcase">
                                     <div class="section_description">
                                         <div class="row">
@@ -34,30 +33,11 @@ id="room_detail_page" @endsection
                                                 <div class="clearfix" style="">
                                                     <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
                                                     <!-- <ul id="vertical" class="gallery list-unstyled"> -->
-                                                        <li data-thumb="/img/lightslider-img/cS-52.jpg">
-                                                            <img alt="slider" src="/img/lightslider-img/cS-52.jpg" />
-                                                        </li>
-                                                        <li data-thumb="/img/lightslider-img/cS-51.jpg">
-                                                            <img alt="slider" src="/img/lightslider-img/cS-51.jpg" />
-                                                        </li>
-                                                        <li data-thumb="/img/lightslider-img/cS-50.jpg"> 
-                                                            <img alt="slider" src="/img/lightslider-img/cS-50.jpg" />
-                                                        </li>
-                                                        <li data-thumb="/img/lightslider-img/cS-49.jpg"> 
-                                                            <img alt="slider" src="/img/lightslider-img/cS-49.jpg" />
-                                                        </li>
-                                                        <li data-thumb="/img/lightslider-img/cS-48.jpg"> 
-                                                            <img alt="slider" src="/img/lightslider-img/cS-48.jpg" />
-                                                        </li>
-                                                        <li data-thumb="/img/lightslider-img/cS-47.jpg"> 
-                                                            <img alt="slider" src="/img/lightslider-img/cS-47.jpg" />
-                                                        </li>
-                                                        <li data-thumb="/img/lightslider-img/cS-46.jpg"> 
-                                                            <img alt="slider" src="/img/lightslider-img/cS-46.jpg" />
-                                                        </li>
-                                                        <li data-thumb="/img/lightslider-img/cS-45.jpg"> 
-                                                            <img alt="slider" src="/img/lightslider-img/cS-45.jpg" />
-                                                        </li>
+                                                        @foreach($room->photos as $photo)
+                                                            <li data-thumb="{{ Helper::s3_url_gen($photo->thumbnail) }}">
+                                                                <img alt="slider" src="{{ Helper::s3_url_gen($photo->photo_url) }}" />
+                                                            </li>    
+                                                        @endforeach
                                                     </ul>
                                                 </div>
                                             </div>
@@ -123,10 +103,7 @@ id="room_detail_page" @endsection
                                             <div class="col-lg-12 col-md-12">
                                                 <div class="room_facilities_des padding-top-50 padding-bottom-50 border-bottom-whitesmoke border-top-whitesmoke">
                                                     <p>
-                                                        Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor. Cras ac justo et augue suscipit euismod vel eget lectus. Proin vehicula nunc arcu, pulvinar accumsan nulla porta vel. Vivamus malesuada vitae sem ac pellentesque.
-                                                    </p>
-                                                    <p>
-                                                        Cras ac justo et augue suscipit euismod vel eget lectus. Proin vehicula nunc arcu, pulvinar accumsan nulla porta vel. Vivamus malesuada vitae sem ac pellentesque.
+                                                        {{ $room->description }}
                                                     </p>
                                                 </div>
                                             </div>
@@ -210,7 +187,7 @@ id="room_detail_page" @endsection
                         <div class="col-lg-12 col-md-12 col-sm-4 sidebar__inner">
                             <div class="hotel_booking_area clearfix">
                                 <div class="hotel_booking">
-                                    <form id="form1" role="form" action="#" class="">
+                                    <form id="form1" role="form" action="{{ url('booking') }}" method="GET">
                                         <div class="col-lg-12 col-md-12">
                                             <div class="room_book">
                                                 <h6>Book This</h6>
@@ -219,62 +196,61 @@ id="room_detail_page" @endsection
                                         </div>
                                         <div class="form-group col-lg-12 col-md-12">
                                             <div class="input-group border-bottom-dark-2">
-                                                <input class="date-picker" id="datepicker" placeholder="Arrival" type="text"/>
+                                                <input class="date-picker" name="check_in" id="datepicker" placeholder="Arrival" type="text" @if(request()->exists('check_in')) value="{{ request()->check_in }}" @endif>
                                                 <div class="input-group-addon"><i class="fa fa-calendar"></i></div>               
                                             </div>
                                         </div>
                                         <div class="form-group col-lg-12 col-md-12">
                                             <div class="input-group border-bottom-dark-2">
-                                                <input class="date-picker" id="datepicker1" placeholder="Departure" type="text"/>
+                                                <input class="date-picker" name="check_in" id="datepicker1" placeholder="Departure" type="text" @if(request()->exists('check_out')) value="{{ request()->check_out }}" @endif>
                                                 <div class="input-group-addon"><i class="fa fa-calendar"></i></div>                
                                             </div>
                                         </div>
                                         <div class="col-lg-12 col-md-12">
                                             <div class="row">
-                                                <div class="form-group col-lg-6 col-md-6 icon_arrow">
+                                                <div class="form-group col-lg-12 col-md-12 icon_arrow">
                                                     <div class="input-group border-bottom-dark-2">
                                                         <select class="form-control" name="room" id="room">
-                                                          <option selected="selected" disabled="disabled">1 Room</option>
-                                                          <option value="Single">1 Room</option>
-                                                          <option value="Double">2 Room</option>
-                                                          <option value="Deluxe">3 Room</option>
+                                                            <option value="1" @if(request()->room == '1') selected @endif>1 Room</option>
+                                                            <option value="2" @if(request()->room == '2') selected @endif>2 Rooms</option>
+                                                            <option value="3" @if(request()->room == '3') selected @endif>3 Rooms</option>
+                                                            <option value="4" @if(request()->room == '4') selected @endif>4 Rooms</option>
+                                                            <option value="5" @if(request()->room == '5') selected @endif>5 Room</option>
                                                         </select>               
                                                     </div>
                                                 </div>
                                                 <div class="form-group col-lg-6 col-md-6 icon_arrow">
                                                     <div class="input-group border-bottom-dark-2">
-                                                        <select class="form-control" name="room" id="bed">
-                                                          <option selected="selected" disabled="disabled">Beds</option>
-                                                          <option value="Single">1 Bed</option>
-                                                          <option value="Double">2 Bed</option>
-                                                          <option value="Deluxe">3 Bed</option>
+                                                        <select class="form-control" name="adult" id="adult">
+                                                                <option value="1" @if(request()->adult == '1') selected @endif>1 Adult</option>
+                                                                <option value="2" @if(request()->adult == '2') selected @endif>2 Adults</option>
+                                                                <option value="3" @if(request()->adult == '3') selected @endif>3 Adults</option>
+                                                                <option value="4" @if(request()->adult == '4') selected @endif>4 Adults</option>
+                                                                <option value="5" @if(request()->adult == '5') selected @endif>5 Adults</option>
+                                                                <option value="6" @if(request()->adult == '6') selected @endif>6 Adults</option>
+                                                                <option value="7" @if(request()->adult == '7') selected @endif>7 Adults</option>
+                                                                <option value="8" @if(request()->adult == '8') selected @endif>8 Adults</option>
+                                                                <option value="9" @if(request()->adult == '9') selected @endif>9 Adults</option>
+                                                                <option value="10" @if(request()->adult == '10') selected @endif>10 Adults</option>
                                                         </select>               
                                                     </div>
                                                 </div>
                                                 <div class="form-group col-lg-6 col-md-6 icon_arrow">
                                                     <div class="input-group border-bottom-dark-2">
-                                                        <select class="form-control" name="room" id="adult">
-                                                          <option selected="selected" disabled="disabled">1 Adult</option>
-                                                          <option value="Single">1 Adult</option>
-                                                          <option value="Double">2 Adult</option>
-                                                          <option value="Deluxe">3 Adult</option>
-                                                        </select>               
-                                                    </div>
-                                                </div>
-                                                <div class="form-group col-lg-6 col-md-6 icon_arrow">
-                                                    <div class="input-group border-bottom-dark-2">
-                                                        <select class="form-control" name="room" id="child">
-                                                          <option selected="selected" disabled="disabled">1 Child</option>
-                                                          <option value="Single">1 Child</option>
-                                                          <option value="Double">2 Child</option>
-                                                          <option value="Deluxe">3 Child</option>
+                                                        <select class="form-control" name="child" id="child">
+                                                            <option value="0" @if(request()->child == '0') selected @endif>0 Child</option>
+                                                            <option value="1" @if(request()->child == '1') selected @endif>1 Child</option>
+                                                            <option value="2" @if(request()->child == '2') selected @endif>2 Children</option>
+                                                            <option value="3" @if(request()->child == '3') selected @endif>3 Children</option>
+                                                            <option value="4" @if(request()->child == '4') selected @endif>4 Children</option>
+                                                            <option value="5" @if(request()->child == '5') selected @endif>5 Children</option>
                                                         </select>               
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-12 col-md-12">
-                                            <a class="btn btn-warning btn-md floatright">Book</a>
+                                            <button class="btn btn-warning btn-md floatright" type="submit">Book</button>
                                         </div>
                                     </form>
                                 </div>

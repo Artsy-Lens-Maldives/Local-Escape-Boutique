@@ -28,9 +28,11 @@ class CreateRoomsTable extends Migration
 
             $table->string('check_in')->nullable();
             $table->string('check_out')->nullable();
-            $table->string('cancellation_policy')->nullable();
-            $table->string('children_bed_policy')->nullable();
-            $table->string('pets_policy')->nullable();
+            $table->longText('cancellation_policy')->nullable();
+            $table->longText('children_bed_policy')->nullable();
+            $table->longText('pets_policy')->nullable();
+
+            $table->string('slug')->nullable();
 
             $table->timestamps();
         });
