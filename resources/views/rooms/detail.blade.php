@@ -19,8 +19,8 @@ id="room_detail_page" @endsection
 
         <div class="room_detail_main margin-bottom-55">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-9 col-md-9">
+                <div class="row main" id="main-content">
+                    <div class="col-lg-9 col-md-9 col-sm-12 content" id="content">
                         <div class="deluxe_room_detail">
                             <div class="section_title content-left margin-bottom-5">
                                 <h5>Deluxe Room Detail <span class="price floatright">$ 130</span> <br> <span class="day floatright">/ night</span></h5>
@@ -205,15 +205,15 @@ id="room_detail_page" @endsection
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-3">
+                    <div class="col-lg-3 col-md-3 col-sm-12 sidebar" id="sidebar">
                         <!-- start hotel booking -->
-                        <div class="col-lg-12 col-md-12 col-sm-4">
+                        <div class="col-lg-12 col-md-12 col-sm-4 sidebar__inner">
                             <div class="hotel_booking_area clearfix">
                                 <div class="hotel_booking">
                                     <form id="form1" role="form" action="#" class="">
                                         <div class="col-lg-12 col-md-12">
                                             <div class="room_book">
-                                                <h6>Book Your</h6>
+                                                <h6>Book This</h6>
                                                 <p>Rooms</p>
                                             </div>
                                         </div>
@@ -288,3 +288,28 @@ id="room_detail_page" @endsection
 
 @endsection
 
+
+
+@section('js')
+
+    <script src="/js/ResizeSensor.js"></script>
+    <script src="/js/sticky-sidebar.js"></script>
+
+    <script>
+        var sidebar = new StickySidebar('#sidebar', {topSpacing: 20,resizeSensor: true, minWidth: 1000});
+    </script>
+@endsection
+
+@section('css')
+    <style>
+        .sidebar{
+            will-change: min-height;
+        }
+
+        .sidebar__inner{
+            transform: translate(0, 0); /* For browsers don't support translate3d. */
+            transform: translate3d(0, 0, 0);
+            will-change: position, transform;
+        }
+    </style>
+@endsection

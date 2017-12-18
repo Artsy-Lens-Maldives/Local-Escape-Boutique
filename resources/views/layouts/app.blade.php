@@ -38,6 +38,8 @@
 		<link rel="stylesheet" href="/css/style.css" />
         <!-- responsive -->
 		<link rel="stylesheet" href="/css/responsive.css" />
+        
+        @yield('css')
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -95,5 +97,6 @@
 
         <!-- my js -->
         <script src="/js/main.js"></script>		
+        @yield('js')
     </body>
 </html>
