@@ -49,3 +49,13 @@ Route::group(['prefix' => 'contact-us'], function() {
         return view('contact.index');
     });
 });
+
+
+Route::group(['prefix' => 'admin'], function() {
+    Route::group(['prefix' => 'rooms'], function() {
+        Route::get('/', function() {
+            return view('admin.rooms.index');
+        });
+    });
+});
+
