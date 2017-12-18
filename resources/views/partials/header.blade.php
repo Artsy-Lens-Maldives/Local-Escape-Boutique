@@ -64,7 +64,7 @@
                                 </div>
 
                                 <!-- Collect the nav links, forms, and other content for toggling -->
-                                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1" style="overflow-x: hidden;">
                                   <ul class="nav navbar-nav">
                                     <li><a href="{{ url('/') }}">Home</a></li>
                                     <li><a href="{{ url('/rooms') }}">Rooms</a></li>
