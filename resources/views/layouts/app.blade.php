@@ -48,7 +48,7 @@
         <![endif]-->
 
     </head>
-    <body id="error_page">
+    <body @yield('body_id')>
         @include('partials.header')
 
 
@@ -61,7 +61,10 @@
         <script src="/js/vendor/jquery-1.11.2.min.js"></script>
         <!-- bootstrap -->
         <script src="/js/bootstrap.min.js"></script>
-		
+		<!-- rev slider -->
+        <script src="/js/rev-slider/rs-plugin/jquery.themepunch.plugins.min.js"></script>
+        <script src="/js/rev-slider/rs-plugin/jquery.themepunch.revolution.js"></script>
+        <script src="/js/rev-slider/rs.home.js"></script>
         <!-- uikit -->
         <script src="/js/uikit.min.js"></script>
         <!-- easing -->
