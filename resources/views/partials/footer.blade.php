@@ -6,7 +6,7 @@
                         <div class="col-lg-8 col-md-8 col-sm-8">
                             <div class="footer_widget">
                                 <div class="footer_logo">
-                                    <a href="#"><img src="/img/footer-logo-one.png" alt=""></a>
+                                    <a href="#"><img src="/img/site-logo.png" alt=""></a>
                                 </div>
                                 <p>Lorem ipsum dolor sit amet, conser adipiscing elit. In consectetur tincidunt dolor.</p>
                                 <ul>

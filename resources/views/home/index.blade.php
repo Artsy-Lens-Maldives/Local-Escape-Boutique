@@ -531,23 +531,25 @@ id="home_one" @endsection
         <section class="contact_us_area content-left">
             <div class="container">
                 <div class="contact_us clearfix">
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                         <div class="call clearfix">
                             <h6>Call Us</h6>
                             <p>+960 777 7777</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="email_us clearfix">
                             <h6>Email us</h6>
                             <p>boutique@localescapemaldives.com</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                        <div class="news_letter clearfix">
-                            <input type="text" placeholder="Enter ID  for News Letter">
-                            <a href="#" class="btn btn-blue">go</a>
-                        </div>
+                        <form action="post" method="{{ url('subscribe/post') }}">
+                            <div class="news_letter clearfix">
+                                <input style="color:white;" type="text" name="email" placeholder="Subscribe for news">
+                                <a type="submit" href="#" class="btn btn-blue">go</a>
+                            </div>
+                        </form>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                         <div class="social_icons clearfix">
@@ -555,7 +557,6 @@ id="home_one" @endsection
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                             </ul>
                         </div>
                     </div>

@@ -6,7 +6,7 @@
         <title>Hotel Booking</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="icon" href="/img/favicon.ico" sizes="16x16">
+        <link rel="icon" href="/favicon.ico" sizes="16x16">
 
         <!-- fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
