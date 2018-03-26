@@ -89,7 +89,7 @@ a:hover{
   float: left;
 }
 .emergency_number {
-  background: #fe5d5d none repeat scroll 0 0;
+  background: #3ac4fa none repeat scroll 0 0;
   float: left;
   padding: 10px;
   position: relative;
@@ -103,7 +103,7 @@ a:hover{
 	margin-right: 8px;
 }
 .emergency_number::after {
-  background: #fe5d5d none repeat scroll 0 0;
+  background: #3ac4fa none repeat scroll 0 0;
   content: "";
   height: 100%;
   left: 100%;
@@ -359,7 +359,7 @@ body#home_one .single_room_wrapper .uk-overlay, body#accomodation_page .single_r
   transition: 0.7s;
 }
 body#home_one .single_wrapper_details, body#accomodation_page .single_wrapper_details {
-	background: #f7c411 none repeat scroll 0 0;
+	background: #3ac4fa none repeat scroll 0 0;
 	height: 100%;
 	width: 100%;
 	-webkit-transition: 0.7s;
@@ -544,7 +544,7 @@ body#home_two .select_room .room_rent > p > span, body#accomodation_page .select
 -----------------------------------------------------------*/
 
 .hotel_facilities_area{
-	background: url(/img/hotel-facilities-bg.jpg) no-repeat fixed 0 0;
+	background: url(/img/custom/Boutique-Photos-23-of-90.jpg) no-repeat fixed 0 0;
 	background-size: cover;
 	background-position: fixed;
 }
@@ -837,7 +837,7 @@ body#error_page .error > p {
 	margin-bottom: 17px;
 }
 body#error_page .error h3 {
-  color: #fe5d5d;
+  color: #3ac4fa;
   font-size: 44px;
   padding-bottom: 35px;
   margin-bottom: 70px;
@@ -1319,12 +1319,12 @@ body#booking_page .booking ul.nav-tabs > li > a > i{
 	text-align: center;
 }
 body#booking_page .booking ul.nav-tabs > li.active > a > i{
-	background: #fe5d5d;
+	background: #3ac4fa;
 	color: #fff;
-	border: 1px solid #fe5d5d;
+	border: 1px solid #3ac4fa;
 }
 body#booking_page .booking ul.nav-tabs > li.active > a{
-	border-bottom: 9px solid #fe5d5d;
+	border-bottom: 9px solid #3ac4fa;
 }
 body#booking_page .personal_info_area .hotel_booking, #booking_page .payment_info_area .hotel_booking{
 	background: none;
@@ -1392,7 +1392,7 @@ body#booking_page .payment_info_area .payment_system ul li{
   z-index: 2;
 }
 .at_love i {
-  background: none repeat scroll 0 0 #fe5d5d;
+  background: none repeat scroll 0 0 #3ac4fa;
   color: #fff;
   font-size: 17px;
   height: 38px;
@@ -1436,7 +1436,7 @@ margin-right: 12px;
 }
 .blog_text_box ul li a:hover {
   text-decoration:none;
-  color:#fe5d5d;
+  color:#3ac4fa;
 }
 .blog_text_box > p {
   color: #444444;
@@ -1446,7 +1446,7 @@ margin-right: 12px;
 }
 .blog_text_box > a:hover {
   text-decoration:none;
-  color:#fe5d5d;
+  color:#3ac4fa;
 }
 .blog_img_box > a {
   color: #ffffff;
@@ -1467,15 +1467,15 @@ right: 1px;
   width: 180px;
 }
 .load_more > a {
-  background: none repeat scroll 0 0 #fe5d5d;
+  background: none repeat scroll 0 0 #3ac4fa;
   color: #fff;
   padding: 15px 30px;
-  border: 2px solid #fe5d5d;
+  border: 2px solid #3ac4fa;
 }
 .load_more > a:hover {
   background: none repeat scroll 0 0 #fff;
-  color: #fe5d5d;
-  border: 2px solid #fe5d5d;
+  color: #3ac4fa;
+  border: 2px solid #3ac4fa;
 }
 
 
@@ -1506,7 +1506,7 @@ body#single_blog_page .breadcrumb_main_area{
   position: absolute;
 }
 .sing_blog_photo i.top{
-    background: #fe5d5d;
+    background: #3ac4fa;
     top: -12px;
     left: 10px;
     width: 40px;
@@ -1562,7 +1562,7 @@ body#single_blog_page .breadcrumb_main_area{
     display: block;
 }
 .sing_blog_post_cont > p span.tag {
-    color: #fe5d5d;
+    color: #3ac4fa;
 }
 .sing_blog_post_cont > blockquote {
     background: #edebeb;
@@ -1594,7 +1594,7 @@ body#single_blog_page .breadcrumb_main_area{
     margin-top: 0;
 }
 .sing_related_post p span{
-    color: #fe5d5d;
+    color: #3ac4fa;
 }
 .sing_blog_post_nav{
     padding: 30px 0;
@@ -1692,7 +1692,7 @@ ul.coments li ul li {
 .comment_details h3 span.comm_time{
     font-size: 13px;
     font-family: 'karla';
-    color:#fe5d5d;
+    color:#3ac4fa;
     font-weight: 400;
     margin-left: 5px;
 }
@@ -1771,7 +1771,7 @@ body#single_blog_page .input_search > input {
 	font-family: "Lora",serif;
 }
 .right_sidebar_area .blog_category ul li a:hover{
-	color: #fe5d5d;
+	color: #3ac4fa;
 }
 .right_sidebar_area .blog_category i {
   font-size: 12px;

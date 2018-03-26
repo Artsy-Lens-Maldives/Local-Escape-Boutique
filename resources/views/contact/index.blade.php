@@ -55,7 +55,7 @@ id="contact_us_page" @endsection
                                         </div>
                                         <div class="col-lg-4 col-md-4">
                                             <!-- <a href="#" class="btn btn-warning btn-md"></a> -->
-                                            <input class="btn btn-warning btn-md" type="submit" name="submit" value="Submit Now" />
+                                            <input class="btn btn-warning btn-md" style="background: #3ac4fa none repeat scroll 0 0; color: white; border: none;" type="submit" name="submit" value="Submit Now" />
                                         </div>
                                     </div>
                                 </form>
@@ -73,7 +73,7 @@ id="contact_us_page" @endsection
                                     </li>
                                     <li>
                                         <i class="fa fa-phone"></i>
-                                        1234567890
+                                        +960 400-8800
                                     </li>
                                     <li>
                                         <i class="fa fa-envelope-o"></i>
@@ -82,10 +82,9 @@ id="contact_us_page" @endsection
                                 </ul>
                                 <div class="social_icons clearfix">
                                     <ul class="clearul">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="https://facebook.com/localescapemaldives"><i class="fa fa-facebook"></i></a></li>
                                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -100,31 +99,24 @@ id="contact_us_page" @endsection
         <section class="contact_us_area content-left">
             <div class="container">
                 <div class="contact_us clearfix">
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                         <div class="call clearfix">
                             <h6>Call Us</h6>
-                            <p>+960 777 7777</p>
+                            <p>+960 400-8800</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
                         <div class="email_us clearfix">
                             <h6>Email us</h6>
                             <p>boutique@localescapemaldives.com</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                        <div class="news_letter clearfix">
-                            <input type="text" placeholder="Enter ID  for News Letter">
-                            <a href="#" class="btn btn-blue">go</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                         <div class="social_icons clearfix">
                             <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://facebook.com/localescapemaldives"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>

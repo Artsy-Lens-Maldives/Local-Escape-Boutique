@@ -13,8 +13,8 @@
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 floatright">
-                                <div class="right_header_top clearfix floatright">
-                                    <ul class="nav navbar-nav navbar-right">
+                                <!--<div class="right_header_top clearfix floatright">
+                                     <ul class="nav navbar-nav navbar-right">
                                         <li class="">
                                             <a class="border-right-dark-4" href="#">login</a></li>
                                         <li role="presentation" class="dropdown">
@@ -22,14 +22,14 @@
                                               register
                                               <span class="caret"></span>
                                             </a>
-                                            <!-- <ul id="menu2" class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                            <ul id="menu2" class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                                               <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
                                               <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
                                               <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-                                            </ul> -->
+                                            </ul> 
                                         </li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -67,13 +67,12 @@
                                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1" style="overflow-x: hidden;">
                                   <ul class="nav navbar-nav">
                                     <li><a href="{{ url('/') }}">Home</a></li>
-                                    <li><a href="{{ url('/rooms') }}">Rooms</a></li>
-                                    <li><a href="{{ url('/gallery') }}">Gallery</a></li>
-                                    <li><a href="{{ url('/blog') }}">Blog</a></li>
-                                    <li><a href="{{ url('/contact-us') }}">Contact Us</a></li
+                                    <li><a href="https://hotels.cloudbeds.com/reservation/qiSDOa">Rooms</a></li>
+                                    {{-- <li><a href="{{ url('/gallery') }}">Gallery</a></li> --}}
+                                    <li><a href="{{ url('/contact-us') }}">Contact Us</a></li>
                                   </ul>
                                   <div class="emergency_number">
-                                      <a href="tel:+9607777777"><img src="/img/call-icon.png" alt="">+960 7777 777</a>
+                                      <a href="tel:+960 400-8800"><img src="/img/call-icon.png" alt="">+960 400-8800</a>
                                   </div>
                                 </div><!-- /.navbar-collapse -->
                             </nav>

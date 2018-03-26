@@ -8,7 +8,7 @@
                                 <div class="footer_logo">
                                     <a href="#"><img src="/img/site-logo.png" alt=""></a>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, conser adipiscing elit. In consectetur tincidunt dolor.</p>
+                                <p>Featuring free WiFi, Local Escape Boutique offers accommodation in Male City, 100 m from Sultan Park. Each accommodation at the 4-star guest house has city views, and guests can enjoy access to a sun terrace. National Football Stadium is a 2-minute walk from the property.</p>
                                 <ul>
                                     <li>
                                         <P><i class="fa fa-map-marker"></i>Local Escape Boutique, <br> Male', <br> Maldives</P>
@@ -22,19 +22,10 @@
                                     <h5 class="padding-left-15">Quick Links</h5>
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <ul>
-                                            <li><a href="#">Rooms</a></li>
-                                            <li><a href="#">Gallery</a></li>
-                                            <li><a href="#">Blog</a></li>
-                                            <li><a href="#">Contact Us</a></li>
+                                            <li><a href="{{ url('rooms') }}">Rooms</a></li>
+                                            <li><a href="{{ url('gallery') }}">Gallery</a></li>
+                                            <li><a href="{{ url('contact-us') }}">Contact Us</a></li>
                                         </ul>  
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 sol-sm-6">
-                                        <ul>
-                                            <li><a href="#">Rooms</a></li>
-                                            <li><a href="#">Gallery</a></li>
-                                            <li><a href="#">Blog</a></li>
-                                            <li><a href="#">Contact Us</a></li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -43,7 +34,7 @@
                     <div class="row">
                         <div class="container">
                             <div class="footer_copyright margin-tb-50 content-center">
-                                <p>© {{ date("Y") }} <a href="#">Artsy Lens Maldives</a>. All rights reserved</p>
+                                <p>© {{ date("Y") }} <a href="#">Local Escape</a>. All rights reserved</p>
                             </div>
                         </div>
                     </div>
