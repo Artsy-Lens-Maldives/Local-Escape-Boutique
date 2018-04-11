@@ -1,0 +1,73 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
+
+use Twilio\Rest\Client;
+
+class SmsController extends Controller
+{
+    public function __construct(Client $client)
+    {
+        $this->middleware('auth');
+        $this->client = $client;
+    }
+
+    public function index()
+    {
+        return view('sms.index');
+    }
+
+    public function send(Request $request)
+    {
+        $message = $request->input('message');
+        $phoneNumbers = $request->input('phoneNumber');
+        
+        $from = $request->input('senderId');
+
+        $phoneNumber = '+960'.$phoneNumbers;
+
+        if ($from == 'Nilsham' OR $from == 'LocalEscape' OR $from == 'LeBoutique') {
+            try {
+                $this->sendMessage($phoneNumber, $message, $from);
+                return redirect('sms')->with('alert-success', 'SMS successfully send');
+    
+            } catch ( \Twilio\Exceptions\RestException  $e ) {
+                return redirect('sms')->with('alert-danger', $e->getMessage());
+            }
+        } else {
+            return redirect('sms')->with('alert-danger', 'Sender Id not verified');
+        }
+        
+        // Testing Numbers
+        // (Pass Validation)
+        // $from = '+15005550006';
+        // (Invalid Number)
+        // $from = '+15005550001';
+        // (Not available for the account)
+        // $from = '+15005550007';
+        //dd($from);
+    }
+
+    private function sendMessage($phoneNumber, $message, $from)
+    {
+        $twilioPhoneNumber = config('services.twilio')['phoneNumber'];
+        $messageParams = array(
+            'from' => $from,
+            'body' => $message
+        );
+
+        $this->client->messages->create(
+            $phoneNumber,
+            $messageParams
+        );
+    }
+
+    public function call()
+    {
+        return view('call');
+    }
+
+}

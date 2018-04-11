@@ -5,6 +5,9 @@ id="home_one" @endsection
 
 @section('content')
 
+        LocalEscape
+        Boutique
+
         {{-- <div id="loader-wrapper">
             <div class="logo"><a href="#"><span style="text-align: center;">Local Escape<br>Boutique</span></a></div>
             <div id="loader">
@@ -189,7 +192,7 @@ id="home_one" @endsection
                                                     <h3>Restaurant</h3>
                                                     <p></p>
                                                     <div class="our_services">
-                                                        <a href="#" class="margin-right-33">Service Hours; 19.00-22:00 </a>
+                                                        <a href="#" class="margin-right-33">Service Hours (Breakfast Only): 08:00 AM to 10:00 AM </a>
                                                         <a href="#">service charge : $15</a>
                                                     </div>
                                                 </div>

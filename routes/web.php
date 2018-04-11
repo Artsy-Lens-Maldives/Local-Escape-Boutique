@@ -24,7 +24,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', function () {
+    return redirect('sms');
+})->name('home');
 
 
 Route::group(['prefix' => 'rooms'], function() {
@@ -112,3 +114,12 @@ Route::group(['prefix' => 'admin'], function() {
     });
 });
 
+
+
+Route::group(['prefix' => 'sms'], function() {
+    Route::get('/', function() {
+        return view('sms.index');
+    });
+
+    Route::post('/', 'SmsController@send');
+});
