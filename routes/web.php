@@ -1,6 +1,7 @@
 <?php
 
 use App\Rooms;
+use App\SmsCount;
 use App\Helpers\Helper;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
@@ -118,7 +119,8 @@ Route::group(['prefix' => 'admin'], function() {
 
 Route::group(['prefix' => 'sms'], function() {
     Route::get('/', function() {
-        return view('sms.index');
+        $remaining = SmsCount::find(1);
+        return view('sms.index', compact('remaining'));
     });
 
     Route::post('/', 'SmsController@send');

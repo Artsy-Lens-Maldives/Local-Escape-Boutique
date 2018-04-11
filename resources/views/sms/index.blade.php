@@ -90,6 +90,8 @@
                         <div class="col-md-12">
                             <form class="form-horizontal" action="{{ url('sms') }}" method="POST">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <p class="help-block">Remaining Messages: {{ $remaining->sms }}</p>
+                                <hr>
                                 <fieldset>
                                     <div class="form-group">
                                         <label class="col-md-4 control-label" for="senderId">Select Sender id from list:</label>

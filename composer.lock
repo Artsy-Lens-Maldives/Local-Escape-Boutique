@@ -4,8 +4,51 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "68b5a0ebef403fd61c06f864561fe2a5",
+    "content-hash": "d711ef16cce8bb5eb8ed641a150b1964",
     "packages": [
+        {
+            "name": "acpmasquerade/sms-counter-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/acpmasquerade/sms-counter-php.git",
+                "reference": "fcd8546e3d5691b2be2116883dd84ba87443f0a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/acpmasquerade/sms-counter-php/zipball/fcd8546e3d5691b2be2116883dd84ba87443f0a0",
+                "reference": "fcd8546e3d5691b2be2116883dd84ba87443f0a0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SMSCounter": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "acpmasquerade",
+                    "email": "acpmasquerade@gmail.com",
+                    "homepage": "http://acpmasquerade.com"
+                }
+            ],
+            "description": "SMS Counter PHP Class Library which detects encoding of an SMS message text, counts the characters as per the encoding and gives page limit information.",
+            "homepage": "http://github.com/acpmasquerade/sms-counter-php",
+            "keywords": [
+                "counter",
+                "gsm",
+                "sms"
+            ],
+            "time": "2016-08-08T08:44:15+00:00"
+        },
         {
             "name": "aws/aws-sdk-php",
             "version": "3.54.4",
@@ -4814,7 +4857,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "acpmasquerade/sms-counter-php": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
